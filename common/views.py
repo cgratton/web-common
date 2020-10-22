@@ -88,3 +88,7 @@ def data_page(request):
 # directions/contact
 def directions_page(request):
     return render(request, 'common/directions_contact.html')
+
+# values statement
+def values_page(request):
+    return render(request, 'common/values.html')
