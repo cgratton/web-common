@@ -10,5 +10,4 @@ urlpatterns = [
     path('news', views.news_page, name='news'),
     path('data_software', views.data_page, name='datasoftware'),
     path('directions_contact', views.directions_page, name='directionscontact'),
-    path('values_statement', views.values_page, name='philosphy'),
 ]
