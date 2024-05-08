@@ -186,20 +186,29 @@
                 {% endfor %}
             </div>
             {% if alumni %}
-			<div class="row">
-			    <div class="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1">
-			        <h1 class="display-4" style="font-size:2.0rem;">Lab Alumni</h1>
-			    </div>
-			</div>
-			{% endif %}
-			<div class="row no-gutters">
-			    {% for person in alumni %}
-			    <div class="col-12 col-md-3 offset-md-1 col-lg-2 offset-lg-1">
-			        <!-- Instead of creating a card, just display the person's name -->
-			        <h5 class="display-4 card-title portrait-text">{{ person.first_name }} {{ person.last_name }}</h5>
-			    </div>
-			    {% endfor %}
-			</div>
+            <div class="row">
+                <div class="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1">
+                    <h1 class="display-4" style="font-size:2.0rem;">Lab Alumni</h1>
+                </div>
+            </div>
+            {% endif %}
+            <div class="row no-gutters">
+                {% for person in alumni %}
+                <div class="col-12 col-md-3 offset-md-1 col-lg-2 offset-lg-1">
+                    <div class="card card-pad img-fluid" style="width: 14rem;">
+                        {% if person.photo %}
+                        <img class="card-img-top" src="{{ person.photo.url }}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% else %}
+                        <img class="card-img-top" src="{% static "common/imgs/person-placeholder.jpg"%}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="display-4 card-title portrait-text">{{ person.first_name }} {{ person.last_name }}</h5>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
