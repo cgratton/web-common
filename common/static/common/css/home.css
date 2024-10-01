@@ -150,7 +150,7 @@ a:hover {
     filter: brightness(0.6);
 }
 .contact > div > .background {
-    background-image: url("https://cdn.jsdelivr.net/gh/cgratton/web-common@caterina/common/static/common/imgs/FloridaStateUniversity.jpg");
+    background-image: url("https://cdn.jsdelivr.net/gh/cgratton/web-common@caterina/common/static/common/imgs/beckman.jpeg");
     background-position: 50% 50%;
     background-size: 1000px 500px;
     -webkit-filter: brightness(0.75);
